@@ -2,75 +2,24 @@ module.exports = {
   parser: "babel-eslint",
   plugins: [
     "babel",
-    "immutable",
-    "import",
-    "flowtype",
-    "promise"
+    "jsx-a11y",
+    "promise",
   ],
   env: {
     es6: true,
     node: true,
     browser: true
   },
+  settings: {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
   rules: {
     "babel/new-cap": "error",
     "babel/no-invalid-this": "error",
     "babel/object-curly-spacing": "error",
-    "babel/semi": "off", // No thanks
-    "flowtype/boolean-style": "error",
-    "flowtype/define-flow-type": "error",
-    "flowtype/delimiter-dangle": ["error", "only-multiline"],
-    "flowtype/generic-spacing": "error",
-    "flowtype/no-dupe-keys": "error",
-    "flowtype/no-primitive-constructor-types": "error",
-    "flowtype/no-types-missing-file-annotation": "off", // I don't need this
-    "flowtype/no-weak-types": "error",
-    "flowtype/object-type-delimiter": "error",
-    "flowtype/require-parameter-type": "error",
-    "flowtype/require-return-type": "error",
-    "flowtype/require-valid-file-annotation": "error",
-    "flowtype/require-variable-type": "error",
-    "flowtype/semi": "error",
-    "flowtype/sort-keys": "error",
-    "flowtype/space-after-type-colon": "error",
-    "flowtype/space-before-generic-bracket": "error",
-    "flowtype/space-before-type-colon": "error",
-    "flowtype/type-id-match": "error",
-    "flowtype/union-intersection-spacing": "error",
-    "flowtype/use-flow-type": "error",
-    "immutable/no-let": "error",
-    "immutable/no-mutation": "warn",
-    "immutable/no-this": "error",
-    "import/default": "error",
-    "import/export": "error",
-    "import/extensions": "error",
-    "import/first": "error",
-    "import/max-dependencies": "warn",
-    "import/named": "error",
-    "import/namespace": "error",
-    "import/newline-after-import": "error",
-    "import/no-absolute-path": "error",
-    "import/no-amd": "error",
-    "import/no-anonymous-default-export": "error",
-    "import/no-commonjs": "error",
-    "import/no-deprecated": "error",
-    "import/no-duplicates": "off", // This rule doesn't understand my style
-    "import/no-dynamic-require": "error",
-    "import/no-extraneous-dependencies": "error",
-    "import/no-internal-modules": "error",
-    "import/no-mutable-exports": "error",
-    "import/no-named-as-default-member": "error",
-    "import/no-named-as-default": "error",
-    "import/no-named-default": "error",
-    "import/no-namespace": "error",
-    "import/no-nodejs-modules": "off", // Only for frontend
-    "import/no-restricted-paths": "error",
-    "import/no-unassigned-import": "error",
-    "import/no-unresolved": "error",
-    "import/no-webpack-loader-syntax": "error",
-    "import/order": "error",
-    "import/prefer-default-export": "error",
-    "import/unambiguous": "error",
+    "babel/semi": "error",
     "promise/always-return": "error",
     "promise/avoid-new": "error",
     "promise/catch-or-return": "error",
@@ -78,15 +27,16 @@ module.exports = {
     "promise/no-native": "off", // We have babel
     "promise/no-nesting": "error",
     "promise/no-promise-in-callback": "error",
+    "promise/no-return-in-finally": "error",
     "promise/no-return-wrap": "error",
     "promise/param-names": "error",
     "promise/prefer-await-to-callbacks": "off", // Not convinced of await/async
     "promise/prefer-await-to-then": "off", // Not convinced of await/async
     "accessor-pairs": "error",
-    "array-bracket-newline": ["error", "always"],
+    "array-bracket-newline": "off",
     "array-bracket-spacing": "error",
     "array-callback-return": "error",
-    "array-element-newline": "error",
+    "array-element-newline": "off",
     "arrow-body-style": "off", // Weird style
     "arrow-parens": "error",
     "arrow-spacing": "error",
@@ -95,8 +45,7 @@ module.exports = {
     "brace-style": "error",
     "callback-return": "error",
     "camelcase": "warn",
-    "capitalized-comments": "error",
-    "capitalized-comments": "off",
+    "capitalized-comments": "off", // What a stupid rule
     "class-methods-use-this": "error",
     "comma-dangle": ["error", "always-multiline"],
     "comma-spacing": "error",
@@ -141,7 +90,7 @@ module.exports = {
     "max-nested-callbacks": "error",
     "max-params": "error",
     "max-statements-per-line": "error",
-    "max-statements": "error",
+    "max-statements": "warn",
     "multiline-ternary": ["error", "never"],
     "new-cap": "error",
     "new-parens": "error",
@@ -284,15 +233,14 @@ module.exports = {
     "no-whitespace-before-property": "error",
     "no-with": "error",
     "nonblock-statement-body-position": "error",
-    "object-curly-newline": "error",
+    "object-curly-newline": "off",
     "object-curly-spacing": "error",
-    "object-property-newline": "error",
+    "object-property-newline": "off",
     "object-shorthand": "error",
     "one-var-declaration-per-line": "error",
     "one-var": ["error", "never"],
     "operator-assignment": "error",
     "operator-linebreak": "off", // Doesn't work with pipes
-    "padded-blocks": "error",
     "padded-blocks": ["error", "never"],
     "padding-line-between-statements": "error",
     "prefer-arrow-callback": "error",
@@ -313,9 +261,8 @@ module.exports = {
     "rest-spread-spacing": "error",
     "semi-spacing": "error",
     "semi-style": "error",
-    "semi": ["error", "never"],
+    "semi": ["error", "always"],
     "sort-imports": "off", // Not worth the hassle
-    "sort-keys": "error",
     "sort-vars": "off", // I don't like making busy work for myself
     "space-before-blocks": "error",
     "space-before-function-paren": "error",
@@ -337,5 +284,6 @@ module.exports = {
     "wrap-regex": "error",
     "yield-star-spacing": "error",
     "yoda": "error",
+    "sort-keys": "off"
   }
 }
