@@ -64,7 +64,7 @@
     "tap": "12.6.1"
   },
   "dependencies": {
-    "@unction/greaterthan": "3.0.0",
+    "@unction/greaterthan": "3.0.1",
     "core-js": "3.0.1"
   },
   "module": "index.js",
