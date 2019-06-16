@@ -64,8 +64,7 @@
     "tap": "12.6.1"
   },
   "dependencies": {
-    "@unction/greaterthan": "3.1.0",
-    "core-js": "3.0.1"
+    "@unction/greaterthan": "3.1.0"
   },
   "module": "module.js",
   "browser": "browser.js"
