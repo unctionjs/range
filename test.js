@@ -2,7 +2,7 @@
 import {test} from "tap";
 import equals from "@unction/equals";
 
-import range from "./index";
+import range from "./";
 
 test(({equal, end}) => {
   equal(
