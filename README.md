@@ -4,7 +4,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> NumberType => NumberType => NumberType
+> number => number => number
 
 Takes a minimum number, a maximum number, and returns a random value from that inclusive range.
 
