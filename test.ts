@@ -1,7 +1,7 @@
 /* eslint-disable no-magic-numbers */
 import equals from "@unction/equals";
 
-import range from "./index.ts";
+import range from "./index";
 
 test(() => {
   expect(range(0)(0)).toBe(0);
