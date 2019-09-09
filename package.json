@@ -60,7 +60,7 @@
     "typescript": "3.5.1"
   },
   "dependencies": {
-    "@unction/greaterthan": "3.1.2"
+    "@unction/greaterthan": "3.1.3"
   },
   "module": "module.js",
   "browser": "browser.js",
