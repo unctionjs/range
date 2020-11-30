@@ -1,6 +1,6 @@
 {
   "name": "@unction/range",
-  "version": "2.12.0",
+  "version": "2.13.0",
   "description": "Takes a minimum number, a maximum number, and returns a random value from that inclusive range",
   "keywords": [
     "unction",
